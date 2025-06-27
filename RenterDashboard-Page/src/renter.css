@@ -1,0 +1,69 @@
+*{
+    background-color: #dadbdc;
+}
+.mynav{
+    background-color: #343a40;
+    padding: 10px 150px 10px 100px;
+    height: 60px;
+    margin-top: 30px 20px 30px 20px;
+}
+.mynav h2{
+    color: #ffffff;
+    margin-right: 550px;
+    background-color: #343a40;
+}
+.mynav a{
+    color: #dbd1d1;
+    text-decoration: none;
+    background-color: #343a40;
+    font-size: 20px;
+}
+#location{
+    width: 350px;
+    height: 40px;
+}
+#range{
+    width: 250px;
+    height: 40px;
+}
+#type{
+    width: 250px;
+    height: 40px;
+}
+#search{
+    width:100px;
+}
+.items{
+    background-color: rgb(249, 249, 248);
+    height:80px;
+    width:100%;
+    padding: 0 80px 0 80px;
+    gap:0;
+    align-items: center;
+    margin: 10px;
+}
+.p-2{
+    background-color: rgb(249, 249, 248);
+}
+.orange{
+    background-color: orangered;
+    color: white;
+}
+.row{
+    background-color: #dadbdc;
+}
+.card{            
+    background-color: #dadbdc;
+    margin: 0px 20px 10px 20px;
+
+}
+.card-body,.card-title,.card-text{
+    background-color: rgb(249, 249, 248);
+}
+.cards{
+    margin:20px 90px 20px 90px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
