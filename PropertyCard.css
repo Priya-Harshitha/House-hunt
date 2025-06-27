@@ -1,0 +1,72 @@
+.property-card {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+}
+
+.title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.property-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.section h3 {
+  margin-bottom: 6px;
+  font-size: 18px;
+}
+
+.section p {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 16px;
+}
+
+.info-grid {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.info-grid h3 {
+  margin-bottom: 4px;
+  font-size: 16px;
+}
+
+.info-grid p {
+  font-size: 14px;
+  color: #444;
+}
+
+.section ul {
+  padding-left: 20px;
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.contact-button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #249ea0;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.contact-button:hover {
+  background-color: #1c7f82;
+}
