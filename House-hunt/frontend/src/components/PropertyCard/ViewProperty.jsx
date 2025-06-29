@@ -40,7 +40,7 @@ export default function ViewProperty() {
             <Col md={6}>
               <Card.Img
   variant="top"
-  src={`http://localhost:5000${property.image}`}
+  src={`https://house-hunt-2.onrender.com${p.image}`}
   style={{ maxHeight: '300px', objectFit: 'cover' }}
 />
 
