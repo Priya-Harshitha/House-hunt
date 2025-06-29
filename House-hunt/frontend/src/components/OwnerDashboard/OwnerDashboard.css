@@ -1,0 +1,10 @@
+.property-toggle-icon {
+  cursor: pointer;
+  color: #444;
+}
+
+@media (min-width: 768px) {
+  .property-toggle-icon {
+    display: none !important;
+  }
+}
