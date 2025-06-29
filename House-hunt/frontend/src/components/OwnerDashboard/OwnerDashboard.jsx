@@ -91,7 +91,7 @@ export default function OwnerDashboard() {
                 <Card className="shadow-sm h-100">
                   <Card.Img
                     variant="top"
-                    src={`http://localhost:5000${p.image}`}
+                    src={`https://house-hunt-2.onrender.com${p.image}`}
                     alt="property"
                     style={{ height: '200px', objectFit: 'cover' }}
                   />
