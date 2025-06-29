@@ -1,32 +1,33 @@
-const express = require('express');
+const express = require("express");
+const mongoose = require("mongoose");
+const dotenv = require("dotenv");
+const cors = require("cors");
 
-const mongoose = require('mongoose');
-const cors = require('cors');
-const path = require('path');
-require('dotenv').config();
-
-const authRoutes = require('./routes/authRoutes');
-const propertyRoutes = require('./routes/propertyRoutes');
-const inquiryRoutes = require('./routes/inquiryRoutes');
-const profileRoutes = require('./routes/profileRoutes');
+dotenv.config();
 
 const app = express();
-
 app.use(cors());
 app.use(express.json());
 
-// ✅ Fix: Static serve uploads folder
-app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+// ✅ Add test route
+app.get("/", (req, res) => {
+  res.send("Backend is running 🎉");
+});
 
-// Routes
-app.use('/api/auth', authRoutes);
-app.use('/api/properties', propertyRoutes);
-app.use('/api/inquiries', inquiryRoutes);
-app.use('/api/profile', profileRoutes);
+// Your routes
+app.use("/api/auth", require("./routes/authRoutes"));
+app.use("/api/properties", require("./routes/propertyRoutes"));
+app.use("/api/inquiries", require("./routes/inquiryRoutes"));
 
-mongoose.connect(process.env.MONGO_URI)
+// Connect to DB and start server
+const PORT = process.env.PORT || 5000;
+mongoose
+  .connect(process.env.MONGO_URI)
   .then(() => {
-    console.log('MongoDB connected');
-    app.listen(5000, () => console.log('Server running on port 5000'));
+    app.listen(PORT, () =>
+      console.log(`MongoDB connected\nServer running on port ${PORT}`)
+    );
   })
-  .catch(err => console.log(err));
+  .catch((err) => {
+    console.error("MongoDB connection failed:", err.message);
+  });
