@@ -12,7 +12,7 @@ export default function Profile() {
       try {
         const token = localStorage.getItem('token');
         const res = await API.get('/profile/me', {
-          headers: { Authorization: token },
+          headers: { Authorization: `Bearer ${token}` }, // ✅ FIXED
         });
         setUser(res.data);
       } catch {
