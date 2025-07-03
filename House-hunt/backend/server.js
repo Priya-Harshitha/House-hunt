@@ -18,7 +18,9 @@ app.get("/", (req, res) => {
 app.use("/api/auth", require("./routes/authRoutes"));
 app.use("/api/properties", require("./routes/propertyRoutes"));
 app.use("/api/inquiries", require("./routes/inquiryRoutes"));
+app.use("/api/profile", require("./routes/profileRoutes")); // ✅ ADD THIS
 app.use('/uploads', express.static('uploads'));
+
 
 
 // Connect to DB and start server
